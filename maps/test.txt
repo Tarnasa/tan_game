@@ -1,0 +1,38 @@
+#################################
+#....,,.,...,.,..,,...,.,,.s,,..#
+#........,.P.,.,,...,.,....,,...#
+####..,.,..,...,..###..,,.####.,#
+#..,,.,#.###..,.,#s,.#.,.,.##.,.#
+#.,,,...,#s...,..#...,.....##...#
+#..s.,...#........######..####..#
+###.###..#...,#......s,,.......#
+  #.# #.,...,.##########.,#####
+ ##.# #########        #,.#
+ #.,#                  #..#
+ ##.#                  #..#
+  ###                  #,.#
+       RRRRRRRRRRRRRRRR#..#
+       RRRRRRRRRRRRRRRR#.,#
+       RRRRRRR"""""""""..,#
+       RRRRRRR"RRRRRRRRR###
+       RRRRRRR"RRRRRRRRRR
+       RRRR""""RRRRRRRRRRR
+       RRRRRRR"RRRRRRRRRRRR
+       RRRRRRR"RRRRRRRRRRRRR
+       RRRRRRR"RRRRRRRRRRRRRR
+       RRRRRRR"RRR"""RRRRRRRRR
+       RRRRRRR"RRR""""""RRRRRRR
+       RRRRRRR"""""""RR"RRRRRRRR
+       RRRRRRRRRRRRRRRR"RRRRRRRR
+       RRRRRRRRRRRRRRRR"RRRRRRRR
+       RRRRRRRRRRRRRRRR"RRRRRRRR
+       RRRRRRRRRRRRRRRR"RRRRRRRR
+       RRRRR""""""""RRR"RRRRRRRR
+       RRRRR"""###""RRR"RRRRRRRR
+       RRRRs""""""""""""RRRRRRRR
+       RRRRR"""###""RRRRRRRRRRRR
+       RRRRR""""""""RRRRRRRRRRRR
+       RRRRRRRRRRRRRRRRRRRRRRRRR
+       RRRRRRRRRRRRRRRRRRRRRRRRR
+       RRRRRRRRRRRRRRRRRRRRRRRRR
+       RRRRRRRRRRRRRRRRRRRRRRRRR

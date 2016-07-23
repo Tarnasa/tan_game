@@ -1,0 +1,136 @@
+2016-06-10:
+Started project, created move-able evil witch with collisions
+
+2016-06-11:
+Added proper direction calculation for witch
+Common object actions:
+    start walking: Move in a direction, change facing direction
+        pos, speed, direction
+    stop walking: Stop all movement
+        pos
+    turn: Change facing direction
+        direction
+    create: Add an object to the game at a specific location facing a direction
+        object_type, pos, direction
+    change_health: Damage or heal
+        health
+    die: Remove from game
+How to handle networked movement:
+    send 'actions' such as start walking, stop walking, etc.
+        along with actions, send the state of every effected object.
+    simulate them client side
+    all messages have a timestamp
+
+Edge cases:
+    Creatures can't move into each other, (except the cat, which can go through anybody)
+
+    Witch at A moves to B, sends message to WW
+    WW moves from C to B, sends message to Witch
+    WW receives message from Witch,
+        compare timestamps of message received and sent
+        whichever occurred first, use that.
+        Rewind WW's action, replay Witch action, replay WW action (which now has no effect)
+
+Every (most) action needs an undo?
+    The undo will store the original position of the object
+To apply an undo:
+    Iterate backwards through frames,
+        restore state to effected objects
+Keep track of all actions that happened in the last 10 seconds
+    so that they can be undone
+Or, if we know that all packets will be received in order,
+    every time we get an update, forget all actions that occurred before then
+
+How to handle order of actions?
+    GameActions (AI, bullets)
+        In order of id?
+    Player actions
+        WW, Witch, Cat
+    By applying game actions first, less actions need to be undone
+
+Change of heart,
+Have every player be authoritative over their own character, and its spells/attacks
+    Also whether they hit/killed an opponent
+Have a separate server which is authoritative over the AI's
+    Or just have one player (The 'host') be AI authority
+
+2016-06-12:
+
+2016-06-13:
+Implemented simple Quadtree with tests
+Implemented collision checking using 2dqt
+
+2016-06-14:
+Implemented loading of spritesheets
+Implemented loading of GIF's through PIL
+Hackish animation
+Made cat sprite
+
+2016-06-15:
+Refactored Directional into GameObject
+
+2016-06-16:
+Lots of refactoring around GameObject and kwargs
+Added network.py
+formalized some communication specs
+Didn't actually run game :(
+
+2016-06-17:
+Made text-only character select screen
+
+2016-06-18:
+Runnable multiplayer
+Send game state on connect
+Dirty objects
+
+2016-06-19:
+Fading multiplayer chat text
+Added camera to follow player
+Load worlds from text file
+
+2016-06-20:
+Added better sliding into corridor collisions
+
+2016-06-21:
+Made spider naively move toward player
+Made spiders and player solid
+Created unstuck functions that I will never use
+
+2016-06-22:
+Fixed unstuck_away (was using integer division in some cases)
+Working multiplayer with spiders controlled only by server
+Made locally-working fireball spell
+Started networked spells
+
+2016-06-23:
+Created/stole memoize and memoize_with
+Created colorize surface
+Created stunned red spiders
+
+2016-06-24: Uguu~
+
+2016-06-25:
+Send damage() across network
+
+2016-06-26:
+Added impulse force of spells on spiders
+
+2016-06-27: Frodo
+
+2016-06-28:
+Added collide message
+Allow client to shoot and hit stuff
+Add Cat
+
+2016-06-29:
+Send Statics over the network, recreating the map
+Send ALL the things
+3 player!
+
+2016-06-30: Zzz
+
+2016-07-01: Fireworks
+
+2016-07-02:
+Implemented walking cat
+Added auto-orienting red tiles
