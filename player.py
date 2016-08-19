@@ -1,6 +1,6 @@
 import pygame
 
-from gameobject import GameObject
+from gameobject import GameObject, TEAM_PLAYER
 from keys import *
 from physics import V
 from spell import PlayerFireball
@@ -9,7 +9,8 @@ from network import send_create_message
 
 class Player(GameObject):
     def __init__(self, sprites, **kwargs):
-        super(Player, self).__init__(sprites=sprites, wall=True, **kwargs)
+        super(Player, self).__init__(sprites=sprites, wall=True,
+                team=TEAM_PLAYER, **kwargs)
         self.walk_speed = 64*5
 
     def run(self, seconds):

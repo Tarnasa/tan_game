@@ -7,6 +7,8 @@ from identifier import get_new_id
 from network import send_message, send_move_message
 import network
 
+TEAM_NEUTRAL, TEAM_PLAYER, TEAM_ENEMY = range(3)
+
 
 class GameObject(object):
     """ The base class for hopefully all objects in the game """
@@ -23,7 +25,7 @@ class GameObject(object):
         self.depth = 0
         self.pos = V(0, 0)
         self.speed = V(0, 0)
-        self.is_enemy = False
+        self.team = TEAM_NEUTRAL
         self.image_index = 0
         self.authority = False  # This client does not own this object
         self.world = None
@@ -68,7 +70,7 @@ class GameObject(object):
                 collided = True
         if not collided:
             delta = self.speed * seconds
-            # Add on the movement from sef.force
+            # Add on the movement from self.force
             if self.force != V(0, 0):
                 accel = self.force.normalized() * -self.decel
                 maximum_force_time = self.force.magnitude() / self.decel

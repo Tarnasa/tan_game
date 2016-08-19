@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import asyncore
 import logging
 import random
@@ -151,6 +152,6 @@ def main():
 
 if __name__ == '__main__':
     import cProfile
-    stats = cProfile.run('main()', sort='tottime')
+    stats = cProfile.run('main()', sort=1)
     # stats.sort_stats('calls')
     # stats.print_stats()
